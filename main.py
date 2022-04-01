@@ -2,8 +2,8 @@ from discord.ext import commands
 import time
 import random
 
-bot = commands.Bot(">>>", self_bot=True)
-klist = ['wsell all','wbattle','whunt']
+bot = commands.Bot(">>>", self_bot=True) #u can change the prefix from >>> to anything u want 
+klist = ['wsell all','wbattle','whunt'] 
 token=input('Token : ')
 
 @bot.event
@@ -14,9 +14,9 @@ async def on_ready():
 async def test(ctx):
     while True:
         import random
-        n = random.randint(20,59)
+        n = random.randint(20,59) #cooldown
         k = random.choice(klist)
-        print(k)
+        print(k) #print command
         print(n)
         time.sleep(n)
         await ctx.send(k)
